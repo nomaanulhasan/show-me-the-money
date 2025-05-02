@@ -4,7 +4,6 @@ A simple full-stack, one-page application to display the **Balance Sheet Report*
 
 > 📌 This project was developed as part of a technical interview task.
 
-
 ## 🚀 Tech Stack
 
 - **Frontend**: React + TypeScript (Vite)
@@ -12,7 +11,6 @@ A simple full-stack, one-page application to display the **Balance Sheet Report*
 - **API Source**: Mock Xero Balance Sheet API (Docker)
 - **Containerization**: Docker & Docker Compose
 - **Testing**: Pytest (backend), React Testing Library (frontend)
-
 
 ## 📦 Project Structure
 
@@ -33,7 +31,6 @@ show-me-the-money/
 ├── README.md              # Project documentation
 └── .gitignore             # Git ignore rules
 ```
-
 
 ## 🐳 Getting Started with Docker
 
@@ -58,23 +55,22 @@ Backend API: http://localhost:8000
 
 Mock Xero API: http://localhost:3000/api.xro/2.0/Reports/BalanceSheet
 
-
 ## 📊 Features
+
 - Fetches Balance Sheet data from a mock Xero API
 - Clean table layout to display financial data
 - Error handling and loading indicators
 - Unit-tested backend and frontend
 - Dockerized setup for easy deployment
 
-
 ## 🧪 Running Tests
+
 Backend (Python/FastAPI):
 
 ```bash
 cd backend
 pytest
 ```
-
 
 ## Frontend (React):
 
@@ -84,18 +80,15 @@ pnpm install
 pnpm test
 ```
 
-
 ## 📝 Notes
 
 - Authentication is mocked; no real Xero credentials are needed.
 - API endpoint used: /api.xro/2.0/Reports/BalanceSheet
 
-
 ## 📫 Contact
+
 For any questions related to this project, please reach out via GitHub or email.
 
-
 ---
-
 
 Let me know if you'd like it tailored to **Next.js** instead of Vite, or if you want placeholder GitHub repo URLs and screenshots included!

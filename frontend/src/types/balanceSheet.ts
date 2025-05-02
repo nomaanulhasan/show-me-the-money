@@ -1,3 +1,5 @@
+import { UseQueryResult } from "@tanstack/react-query";
+
 export interface Attribute {
   Value: string;
   Id: string;
@@ -9,10 +11,15 @@ export interface Cell {
 }
 
 export interface Row {
-  RowType: 'Header' | 'Section' | 'Row' | 'SummaryRow';
+  RowType: "Header" | "Section" | "Row" | "SummaryRow";
   Title?: string;
   Cells?: Cell[];
   Rows?: Row[];
+}
+
+export interface SectionRow {
+  RowType: "Row";
+  Cells: Cell[];
 }
 
 export interface Report {
@@ -22,7 +29,7 @@ export interface Report {
   ReportTitles: string[];
   ReportDate: string;
   UpdatedDateUTC: string;
-  Fields: any[];
+  Fields: unknown[];
   Rows: Row[];
 }
 
@@ -32,7 +39,7 @@ export interface BalanceSheetData {
 }
 
 export interface BalanceSheetProps {
-  fetchBalanceSheetData: () => Promise<Report[]>;
+  balanceSheetQuery: UseQueryResult<any, Error>;
 }
 
 export interface SectionCheckRow {
@@ -42,8 +49,17 @@ export interface SectionCheckRow {
 
 export interface Header {
   RowType: string;
-  Cells: { Value: string }[];
+  Cells: Cell[];
 }
+
 export interface RowRendererProps {
-  rows?: Row[];
+  header: Cell[];
+  rows: Row[];
+  hasSectionTitle: boolean;
+}
+
+export interface SectionRendererProps {
+  title?: string;
+  header: Cell[];
+  rows?: SectionRow[];
 }
