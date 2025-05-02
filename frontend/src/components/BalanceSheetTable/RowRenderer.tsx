@@ -1,5 +1,5 @@
+import { Row, RowRendererProps } from "@/types/balanceSheet";
 import { FC } from "react";
-import { Row, RowRendererProps } from "../types/balanceSheet";
 import BodyRenderer from "./BodyRenderer";
 import FooterRenderer from "./FooterRenderer";
 import HeaderRenderer from "./HeaderRenderer";
@@ -24,7 +24,6 @@ const RowRenderer: FC<RowRendererProps> = ({
       {rows?.length ? (
         <>
           <BodyRenderer getBodyRows={getBodyRows} />
-
           <FooterRenderer getSummaryRows={getSummaryRows} />
         </>
       ) : null}

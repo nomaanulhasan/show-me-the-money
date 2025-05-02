@@ -1,6 +1,7 @@
-import { TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Cell } from '@/types/balanceSheet';
-import { useTheme } from 'next-themes';
+import { TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { getTableCellClass } from "@/lib/utils";
+import { Cell } from "@/types/balanceSheet";
+import { useTheme } from "next-themes";
 
 const HeaderRenderer = ({ header }: { header: Cell[] }) => {
   const { theme } = useTheme();
@@ -10,11 +11,13 @@ const HeaderRenderer = ({ header }: { header: Cell[] }) => {
     <TableHeader>
       <TableRow>
         {header.map((cell: Cell, i: number) => (
-          <TableHead className={`
-            ${i > 0 ? "w-[25%] text-right" : "w-[50%] text-left"}
+          <TableHead
+            className={`
+            ${getTableCellClass(i)}
             ${isDarkTheme ? "bg-sky-700" : "bg-sky-100"}
           `}
             key={i}
+            title={cell.Value.slice(-4)}
           >
             {cell.Value}
           </TableHead>

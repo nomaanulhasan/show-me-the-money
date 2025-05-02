@@ -1,15 +1,15 @@
+import { SectionRendererProps, SectionRow } from "@/types/balanceSheet";
 import { ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import { FC, useState } from "react";
-import { SectionRendererProps, SectionRow } from "../types/balanceSheet";
-import RowRenderer from "./RowRenderer";
 import {
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/table";
+} from "../ui/table";
+import RowRenderer from "./RowRenderer";
 
 const SectionRenderer: FC<SectionRendererProps> = ({ title, header, rows }) => {
   const { theme } = useTheme();
@@ -55,36 +55,26 @@ const SectionRenderer: FC<SectionRendererProps> = ({ title, header, rows }) => {
         </TableHeader>
       ) : null}
 
-      {rows?.length ? (
-        title ? (
-          isRowsVisible && (
+      {rows?.length
+        ? (!title || isRowsVisible) && (
             <RowRenderer
               header={header}
               rows={rows as SectionRow[]}
               hasSectionTitle={!!title}
             />
           )
-        ) : (
-          <RowRenderer
-            header={header}
-            rows={rows as SectionRow[]}
-            hasSectionTitle={!!title}
-          />
-        )
-      ) : (
-        isRowsVisible && (
-          <TableBody>
-            <TableRow>
-              <TableCell
-                colSpan={header.length}
-                className="row-parent__no-data pt-2 pb-4 text-left px-2 md:text-center text-muted-foreground"
-              >
-                No data available
-              </TableCell>
-            </TableRow>
-          </TableBody>
-        )
-      )}
+        : isRowsVisible && (
+            <TableBody>
+              <TableRow>
+                <TableCell
+                  colSpan={header.length}
+                  className="row-parent__no-data pt-2 pb-4 text-left px-2 md:text-center text-muted-foreground"
+                >
+                  No data available
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          )}
     </>
   );
 };

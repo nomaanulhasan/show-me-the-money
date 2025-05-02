@@ -1,7 +1,7 @@
 import App from "@/App.tsx";
 import "@/index.css";
+import ThemeProvider from "@/Providers/ThemeProvider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ThemeProvider } from "next-themes";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { Toaster } from "sonner";

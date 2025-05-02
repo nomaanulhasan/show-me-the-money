@@ -1,8 +1,8 @@
 import "@/App.css";
-import BalanceSheet from "@/components/BalanceSheet";
+import BalanceSheet from "@/components/BalanceSheetTable/BalanceSheet";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useQuery } from "@tanstack/react-query";
 import { useTheme } from "next-themes";
-import { ThemeToggle } from "./components/ThemeToggle";
 
 async function fetchBalanceSheetData() {
   const response = await fetch("http://localhost:8000/api/balance-sheet");
