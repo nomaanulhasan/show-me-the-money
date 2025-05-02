@@ -14,6 +14,7 @@ import {
 const SectionRenderer: FC<SectionRendererProps> = ({ title, header, rows }) => {
   const { theme } = useTheme();
   const isDarkTheme = theme === "dark";
+
   const [isRowsVisible, setIsRowsVisible] = useState<boolean>(false);
   const toggleRowCollapse = () => {
     setIsRowsVisible(visible => !visible);
@@ -76,7 +77,7 @@ const SectionRenderer: FC<SectionRendererProps> = ({ title, header, rows }) => {
             <TableRow>
               <TableCell
                 colSpan={header.length}
-                className="row-parent__no-data pt-2 pb-4 text-left px-2 md:text-center"
+                className="row-parent__no-data pt-2 pb-4 text-left px-2 md:text-center text-muted-foreground"
               >
                 No data available
               </TableCell>

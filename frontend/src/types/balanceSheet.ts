@@ -63,3 +63,11 @@ export interface SectionRendererProps {
   header: Cell[];
   rows?: SectionRow[];
 }
+
+export interface BodyRendererProps {
+  getBodyRows: Row[];
+}
+
+export interface FooterRendererProps {
+  getSummaryRows: Row[];
+}

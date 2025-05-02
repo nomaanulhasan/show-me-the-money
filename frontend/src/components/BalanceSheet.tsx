@@ -46,6 +46,7 @@ const BalanceSheet: FC<BalanceSheetProps> = ({ balanceSheetQuery }) => {
       {isLoading && <LoadingBalanceSheet />}
 
       {error && <div>Oops! Something went wront, please try again later.</div>}
+
       {balanceSheet?.map((item: Report) => (
         <div key={item.ReportID}>
           <h2 className="text-4xl font-semibold">{item.ReportTitles[0]}</h2>
@@ -53,6 +54,7 @@ const BalanceSheet: FC<BalanceSheetProps> = ({ balanceSheetQuery }) => {
           <p className="text-base mb-4">{item.ReportTitles[2]}</p>
         </div>
       ))}
+
       <div className="tables-container flex flex-col gap-2">
         {balanceSheetSections?.map((section: Row, i: number) => {
           return (
