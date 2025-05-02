@@ -1,0 +1,11 @@
+/dist/
+/build/
+/node_modules/
+
+.vscode
+.dockerignore
+.git
+.gitignore
+.env.example
+.env
+*.log

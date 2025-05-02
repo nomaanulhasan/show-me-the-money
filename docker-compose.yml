@@ -1,0 +1,26 @@
+services:
+  mock-xero-api:
+    image: jaypeng2015/show-me-the-money
+    container_name: mock-xero-api
+    ports:
+      - "${MOCK_XERO_PORT}:3000"
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    ports:
+      - "${BACKEND_PORT}:8000"
+    depends_on:
+      - mock-xero-api
+    environment:
+      - MOCK_API_URL=${MOCK_API_URL}
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "${FRONTEND_PORT}:5173"
+    depends_on:
+      - backend
