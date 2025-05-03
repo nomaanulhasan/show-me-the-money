@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useTheme } from "next-themes";
 
 async function fetchBalanceSheetData() {
-  const response = await fetch("http://localhost:8000/api/balance-sheet");
+  const response = await fetch("/api/balance-sheet");
   if (!response.ok) {
     throw new Error("Network response was not ok");
   }

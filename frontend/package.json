@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
+  "proxy": "http://backend:8000",
   "scripts": {
     "build": "tsc -b && vite build",
     "dev": "vite --host 0.0.0.0",
