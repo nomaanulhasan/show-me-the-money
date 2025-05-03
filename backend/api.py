@@ -19,4 +19,5 @@ async def balance_sheet():
     data = await get_balance_sheet()
     return data
   except Exception as e:
+    print("❌ Error:", e)
     raise HTTPException(status_code=500, detail=str(e))

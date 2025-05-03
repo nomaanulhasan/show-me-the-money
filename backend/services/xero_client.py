@@ -1,6 +1,5 @@
 import httpx # type: ignore
 from dotenv import load_dotenv # type: ignore
-from fastapi.responses import JSONResponse # type: ignore
 import os
 
 load_dotenv()
