@@ -46,7 +46,7 @@ const BalanceSheet: FC<BalanceSheetProps> = ({ balanceSheetQuery }) => {
     >
       {isLoading && <LoadingBalanceSheet />}
 
-      {error && <div>Oops! Something went wront, please try again later.</div>}
+      {error && <div>Oops! Something went wrong, please try again later.</div>}
 
       <BalanceSheetTitles balanceSheet={balanceSheet} />
 

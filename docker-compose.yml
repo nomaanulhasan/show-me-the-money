@@ -4,6 +4,9 @@ services:
     container_name: mock-xero-api
     ports:
       - "${MOCK_XERO_PORT}:3000"
+    platform: linux/arm64
+    environment:
+      - DOCKER_DEFAULT_PLATFORM=linux/arm64
 
   backend:
     build:
