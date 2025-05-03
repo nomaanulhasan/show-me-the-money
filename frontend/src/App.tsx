@@ -5,7 +5,13 @@ import { useQuery } from "@tanstack/react-query";
 import { useTheme } from "next-themes";
 
 async function fetchBalanceSheetData() {
-  const response = await fetch("/api/balance-sheet");
+  const API_URL = import.meta.env.VITE_BALANCE_SHEET_API_URL;
+  if (!API_URL) {
+    throw new Error("API URL is not defined");
+  }
+
+  // Fetch the balance sheet data from the API
+  const response = await fetch(API_URL);
   if (!response.ok) {
     throw new Error("Network response was not ok");
   }
@@ -17,9 +23,11 @@ function App() {
   const balanceSheetQuery = useQuery({
     queryKey: ["balanceSheet"],
     queryFn: fetchBalanceSheetData,
-    // refetchOnReconnect: false,
-    // refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
+    refetchOnMount: false,
     retry: false,
+    staleTime: 1000 * 60 * 5, // 5 minutes
   });
   const { theme } = useTheme();
   const isDarkTheme = theme === "dark";
