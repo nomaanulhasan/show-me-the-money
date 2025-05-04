@@ -63,6 +63,8 @@ npm run dev
 > ✅ Tip: This frontend app is not meant to run independently.
 > Always run the entire stack using Docker to ensure all services (frontend, backend, mock API) are properly connected.
 
-## 🧑‍💻 Author
+## 📫 Contact
 
 Built with ❤️ by [Syed NomanulHasan](https://nomaanulhasan.com)
+
+For any questions related to this project, please reach out via GitHub or email.

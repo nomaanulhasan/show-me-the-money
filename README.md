@@ -4,13 +4,42 @@ A simple full-stack, one-page application to display the **Balance Sheet Report*
 
 > 📌 This project was developed as part of a technical interview task.
 
-## 🚀 Tech Stack
+## ✨ Highlights
 
-- **Frontend**: React + TypeScript (Vite)
-- **Backend**: FastAPI (Python)
-- **API Source**: Mock Xero Balance Sheet API (Docker)
-- **Containerization**: Docker & Docker Compose
-- **Testing**: Pytest (backend), React Testing Library (frontend)
+- 📊 Beautifully formatted UI using **Shadcn UI**, **Tailwind CSS**, and **Lucide Icons**
+- 📈 Real-time financial comparison chips (2024 vs. 2025) with color-coded trends and percentage tooltips
+- 📁 Single-page frontend using **React 19 + TypeScript + Vite**
+- 🔄 API state management with **TanStack React Query**
+- ⏳ Includes **loading skeletons** and robust **error handling**
+- 🐳 Seamlessly integrated using **Docker Compose**
+
+> ✅ Tip: This full-stack app is designed to be run via **Docker Compose**. Running the frontend container automatically starts all required services — Backend + Mock API.
+
+---
+
+## 🖼️ Screenshots
+
+Screenshots of the working app UI are available in the project root to visually demonstrate the financial table, chip indicators, hover states, and collapsible layout.
+
+```md
+![App Screenshot - Table Overview - All Collapsed Rows](./screenshots/screenshot_all_collapsed.png)
+![App Screenshot - Table Overview - All Expanded Rows](./screenshots/screenshot_all_expanded.png)
+![App Screenshot - Trending Chip Hover Percentage](./screenshots/screenshot_hover_percentage.png)
+![App Screenshot - Dark Theme](./screenshots/screenshot_dark.png)
+![App Screenshot - Light Theme](./screenshots/screenshot_light.png)
+```
+
+## 📦 Tech Stack
+
+| Layer      | Tech Stack                                                                     |
+| ---------- | ------------------------------------------------------------------------------ |
+| Frontend   | React 19, TypeScript, Vite, Shadcn UI, Tailwind CSS, Lucide Icons, React Query |
+| Backend    | FastAPI, Python 3.12, Pydantic                                                 |
+| API Source | Mock Xero Balance Sheet API (Docker image)                                     |
+| Testing    | Pytest (backend), Jest (frontend)                                              |
+| DevOps     | Docker, Docker Compose                                                         |
+
+---
 
 ## 📦 Project Structure
 
@@ -76,8 +105,8 @@ pytest
 
 ```bash
 cd frontend
-pnpm install
-pnpm test
+npm install
+npm test
 ```
 
 ## 📝 Notes
@@ -87,8 +116,6 @@ pnpm test
 
 ## 📫 Contact
 
+Built with ❤️ by [Syed NomanulHasan](https://nomaanulhasan.com)
+
 For any questions related to this project, please reach out via GitHub or email.
-
----
-
-Let me know if you'd like it tailored to **Next.js** instead of Vite, or if you want placeholder GitHub repo URLs and screenshots included!

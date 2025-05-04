@@ -43,7 +43,7 @@ docker-compose up --build
 ```
 
 > ✅ **Tip:** This backend app is not meant to run independently via Docker.  
-> Always run the **frontend app with Docker**, which automatically starts all required services:
+> Always run the **root app with Docker**, which automatically starts all required services:
 >
 > - 🧾 Xero Mock API
 > - ⚙️ Backend App
@@ -51,7 +51,7 @@ docker-compose up --build
 >
 > This ensures everything is properly connected and accessible.
 
-The API will be available at: http://localhost:8000
+The Backend API will be available at: http://localhost:8000
 
 ## 🧪 Run Tests
 
@@ -121,5 +121,8 @@ pytest-asyncio
 dotenv
 ```
 
-📄 License
-MIT – © 2025 Show Me the Money Team
+## 📫 Contact
+
+Built with ❤️ by [Syed NomanulHasan](https://nomaanulhasan.com)
+
+For any questions related to this project, please reach out via GitHub or email.
