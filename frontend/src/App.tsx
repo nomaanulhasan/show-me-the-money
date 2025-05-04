@@ -2,6 +2,7 @@ import "@/App.css";
 import BalanceSheet from "@/components/BalanceSheetTable/BalanceSheet";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import { useTheme } from "next-themes";
 
 async function fetchBalanceSheetData() {
@@ -10,13 +11,13 @@ async function fetchBalanceSheetData() {
     throw new Error("API URL is not defined");
   }
 
-  // Fetch the balance sheet data from the API
-  const response = await fetch(API_URL);
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
+  try {
+    const response = await axios.get(API_URL);
+    return response.data.Reports;
+  } catch (error) {
+    console.error("Error fetching balance sheet data:", error);
+    throw new Error("Failed to fetch balance sheet data");
   }
-  const data = await response.json();
-  return data.Reports;
 }
 
 function App() {
