@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# 🧾 Show Me The Money — Frontend App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the **Show Me The Money** project. It is a single-page React 19 + TypeScript app built with [Vite](https://vitejs.dev/) and styled using [Shadcn UI](https://ui.shadcn.com/) and [Tailwind CSS](https://tailwindcss.com/). The app fetches financial data from the backend (which mocks Xero API data) and displays it in a well-formatted table.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🚀 **Built with Vite** for lightning-fast performance
+- ⚛️ **React 19 + TypeScript** stack
+- 🎨 **UI** using Shadcn components and Tailwind CSS
+- 📊 **Three-column table layout** for comparing financial data for years 2024 and 2025
+- 🟢🔴 **Green & red chips** to show financial increases and decreases
+- 📈 **Trending icons** from [Lucide Icons](https://lucide.dev/icons/) with hover tooltips showing percentage change
+- 🔄 **Collapsible sections** for table rows
+- ⏳ **Loading skeleton** and error states for API fetches
+- 🔁 Data fetching and caching handled by **React Query (TanStack Query)**
 
-## Expanding the ESLint configuration
+## 📦 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Tech         | Description               |
+| ------------ | ------------------------- |
+| Vite         | Build tool                |
+| React 19     | UI framework              |
+| TypeScript   | Type safety               |
+| Shadcn UI    | Headless UI components    |
+| Tailwind CSS | Utility-first styling     |
+| Lucide Icons | Trend icons (up/down)     |
+| React Query  | Data fetching and caching |
+| Axios        | HTTP client               |
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🖼️ Screenshots
+
+Screenshots of the working application UI are available in the root of this repository. You can preview the clean and dynamic financial data presentation, including tooltips, chips, and collapsible table rows.
+
+## 🧪 Testing
+
+> ✅ Coming soon: Unit and integration tests using **Jest**.
+
+## 📜 Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-org/show-me-the-money-frontend.git
+cd show-me-the-money-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+> Or use pnpm install or yarn if you're not using npm.
+
+## 3. Run the app locally
+
+```bash
+npm run dev
+```
+
+## 📝 Notes
+
+> ✅ Tip: This frontend app is not meant to run independently.
+> Always run the entire stack using Docker to ensure all services (frontend, backend, mock API) are properly connected.
+
+## 🧑‍💻 Author
+
+Built with ❤️ by [Syed NomanulHasan](https://nomaanulhasan.com)
