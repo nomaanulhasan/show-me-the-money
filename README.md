@@ -19,7 +19,7 @@ A simple full-stack, one-page application to display the **Balance Sheet Report*
 
 ## 🖼️ Screenshots
 
-📸 [Screenshots](./screenshots.md) of the working app UI are available to visually demonstrate the financial table layout, chip indicators, hover states, collapsible rows, and theme variations.
+📸 [Screenshots](./SCREENSHOTS.md) of the working app UI are available to visually demonstrate the financial table layout, chip indicators, hover states, collapsible rows, and theme variations.
 
 ## 📦 Tech Stack
 
